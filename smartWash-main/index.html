@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
+	<link href="src/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="h-12 w-full bg-purple-600 flex flex-row justify-between items-center">
+		<h1 class="text-2xl font-extrabold text-white ml-2">
+			SmartWash
+		</h1>
+		<i id="nav-hamburger-btn"
+			class="fa-solid fa-bars text-2xl text-white mr-3 border-2 border-transparent hover:border-white hover:rounded-sm p-1"></i>
+	</nav>
+	<div id="nav-menu" class="hidden bg-purple-500 text-white text-md p-2 flex-col">
+		<ul>
+			<li class="w-full hover:bg-purple-600 p-1 rounded-sm">Some action</li>
+			<li class="w-full hover:bg-purple-600 p-1 rounded-sm">Some other action</li>
+			<li class="w-full hover:bg-purple-600 p-1 rounded-sm">More actions</li>
+		</ul>
+	</div>
+	<main class="flex flex-col justify-center items-center w-full bg-white p-2">
+		<div class="w-full flex items-center border-solid border-1 border-black rounded-sm m-2">
+			<img src="" alt="weather image" class="w-20 h-20" id="weather-icon">
+			<div class="h-full py-2 px-2">
+				<h2 class="py-1" id="weather-condition">Weather Information</h2>
+				<h3>Temperature: <span id="weather-temperature"></span></h3>
+				<h3>Humidity: <span id="weather-humidity"></span></h3>
+				<h2 id="weather-verdict" class="font-bold">
+					Verdict
+				</h2>
+			</div>
+		</div>
+		<h1 class="text-xl w-full text-center p-2">
+			Machines Listing
+		</h1>
+		<div id="machines-area" class="w-full p-2 flex flex-col gap-2">
+		</div>
+	</main>
+	<script type="module" src="/src/main.js"></script>
+	<script src="https://kit.fontawesome.com/52c243a744.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

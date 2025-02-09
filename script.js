@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkWashDiv = document.querySelector(".checkWash");
     
     async function checkWeather() {
-        const apiKey = "a39301d6084f41cf9f051617250602"; // Replace with your actual WeatherAPI key
-        const location = "Chennai"; // Replace with your city or dynamically fetch user's location
+        const apiKey = "a39301d6084f41cf9f051617250602"; 
+        const location = "Electronic City"; 
         const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
 
         try {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             checkWashDiv.style.fontSize = "1.5rem";
 
             if (isSunny) {
-                checkWashDiv.innerHTML += " ✅ Good weather to wash clothes!";
+                checkWashDiv.innerHTML += ` ✅ Good weather to wash clothes! Weather: ${data.current.condition.text}`;
                 checkWashDiv.style.backgroundColor = "#4CAF50"; // Green
                 checkWashDiv.style.color = "#FFFFFF";
             } else {
